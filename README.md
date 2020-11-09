@@ -48,7 +48,7 @@ This assumes you use Visual Studio 2017
 - Remove the original `.cpp` and `.h` source files from the newly added project, i.e. if you duplicated `Gradient.vcxproj`, remove `FFGLGradients.h` and `FFGLGradients.cpp`
 - In Explorer, go to `<repo>/source/`, duplicate a plugin folder and rename the files. Choose a corresponding plugin type, i.e. copy `AddSubtract` if you want to build an Effect plugin or `Gradients` if you want to build a Source plugin.
 - Add the new source files to the project by dragging them into Visual Studio, onto your new project.
-- If you want to start the build with Visual Studio's Build command (F5), right-click the project and select Set as Startup Project. Altenatively, you can right-click the project and select Build.
+- If you want to start the build with Visual Studio's Build command (F5), right-click the project and select Set as Startup Project. Alternatively, you can right-click the project and select Build.
 - After building, find the resulting `.dll` file in `\binaries\x64\Debug`. Copy it to `<user folder>/Documents/Resolume/Extra Effects`
 
 ## Convenience tips
@@ -56,8 +56,8 @@ This assumes you use Visual Studio 2017
 - Create a symlink from the build binaries folder to Resolume's Extra Effects folder. This way, new plugins will be available as soon as you start Arena after compiling without the need to manually drag them over.
 	1. Remove the existing _~/Documents/Resolume Arena/Extra Effects_ (perhaps check that it is empty first).
 	2. Create the symlink: 
-		- **Mac**: `ln -s <repo>/binaries/debug ~/Documents/Resolume\ Arena/Extra\ Effects`. 
-		- **Windows 10**: `mklink /J "<user folder>\Documents\Resolume Arena\Extra Effects" <repo>\binaries\x64\Debug`
+		- **Mac** (Terminal): `ln -s <repo>/binaries/debug ~/Documents/Resolume\ Arena/Extra\ Effects`. 
+		- **Windows 10** (cmd.exe): `mklink /J "<user folder>\Documents\Resolume Arena\Extra Effects" <repo>\binaries\x64\Debug`
 
 - Automatically start Arena after a successfull compile so that pressing Cmd + R (Mac) or F5 (Windows) compiles your plugin and starts Arena immediately.
 
@@ -70,8 +70,8 @@ This assumes you use Visual Studio 2017
 
 	**Windows**
 	
-	- Right click the project > properties > Debugging
-	- For Command, fill the path to Arena, usually `C:\Program Files\Resolume Arena\Arena.exe`
+	- Right click the project > properties > Configuration Properties > Debugging
+	- For Command, fill in the path to Arena, usually `C:\Program Files\Resolume Arena\Arena.exe`
 	- For Working Directory, fill in the program folder, usually `C:\Program Files\Resolume Arena\`
 	- If you want to disable the splash screen when starting Arena, for Command Arguments, add `--nosplash`
 	
